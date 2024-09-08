@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.headWord {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.headWord2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4.3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    height: 200px;
+}
+
+.col-xl-3 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row; /* Arrange items side by side */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    height: auto; /* Adjust height to fit content */
+}
+
+.card-img-top {
+    flex: 0 0 200px; /* Fixed width for the image */
+    height: auto;
+}
+
+.card-body {
+    flex: 1; /* Take up remaining space */
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Stack title and text vertically */
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .headWord2 {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card {
+        flex-direction: row; 
+    }
+
+    .card-img-top {
+        max-width: 100px; /* Set a max-width for the image */
+    }
+
+    .card-title {
+        font-size: 1.1rem; /* Adjusted font size */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Adjusted font size */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+    .headWord2 {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card {
+        flex-direction: row; /* Ensure image and text stay in the same row */
+    }
+
+    .card-img-top {
+        max-width: 100px; /* Set a max-width for the image */
+    }
+
+    .card-title {
+        font-size: 1.1rem; /* Adjusted font size */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Adjusted font size */
+    }
+    
+    
+}
+
+
+/* Larger screens */
+@media (min-width: 769px) {
+    .headWord {
+        margin-top: 150px; /* Default margin for larger screens */
+        text-align: center;
+    }
+
+    .headWord2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 4.3rem; /* Default font size for larger screens */
+    }
+
+    .card {
+        flex-direction: column; /* Ensure image and text are in the same row */
+    }
+
+    .card-img-top {
+        max-width: 100%; 
+        height:200px;
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* Default font size */
+    }
+
+    .card-text {
+        font-size: 1.25rem; /* Default font size */
+    }
+}
