@@ -61,7 +61,27 @@
     width: 100%;
 }
 
-/* Adjust the body padding to avoid overlap with fixed navbar */
 body {
     padding-top: 70px; 
+}
+
+
+.navbar-toggler {
+    border-color: white; /* Set the border color to white */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* This SVG makes the lines (hamburger icon) white */
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 122px;  /* Reduce the width of the logo */
+        height: auto;  /* Keep the aspect ratio */
+    }
+
+    .navbar-toggler {
+        margin-left: auto;  /* Push the toggle button to the right */
+    }
 }

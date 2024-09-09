@@ -4,7 +4,7 @@
 }
 .hero-section {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     background: url('../../assets/images/hero.jpg') no-repeat center center/cover; 
     display: flex;
     justify-content: center;
@@ -46,13 +46,13 @@
   }
   
   .card-gradient {
-    border-radius: 0; /* Remove rounded corners */
+    border-radius: 0; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height:100%; /* Set a fixed height for all cards */
+    height:100%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  /* Shades of #09c */
+
   .card-1 {
     background: linear-gradient(135deg, #006699, #09c);
   }
@@ -86,59 +86,55 @@
   
   .card-gradient h5 {
     font-size: 1.4rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
   }
 
   
-  /* Default for extra-large screens (larger than 1200px) */
 .justified-text {
   text-align: justify;  
   line-height: 1.5;     
   margin-right: 20px;  
   margin-left: 0;   
-  font-size: 1.5rem;  /* Font size for extra-large screens */
+  font-size: 1.5rem;  
 }
 
-/* Large screens (992px to 1199px) */
 @media (max-width: 1199px) {
   .justified-text {
       text-align: justify;  
       line-height: 1.5;     
       margin-right: 15px;  
       margin-left: 0;   
-      font-size: 1.5rem;  /* Font size for large screens */
+      font-size: 1.5rem; 
   }
 }
 
-/* Medium screens (768px to 991px) */
 @media (max-width: 991px) {
   .justified-text {
       text-align: left;           
       margin-right: 10px;            
       margin-left: 0;             
       line-height: 1.5;           
-      font-size: 1rem;  /* Font size for medium screens */
+      font-size: 1rem;  
   }
 }
 
-/* Small screens (576px to 767px) */
 @media (max-width: 767px) {
   .justified-text {
       text-align: left;           
       margin-right: 5px;            
       margin-left: 0;             
       line-height: 1.5;           
-      font-size: 0.95rem;  /* Font size for small screens */
+      font-size: 0.95rem;  
   }
 }
 
-/* Extra-small screens (less than 576px) */
 @media (max-width: 576px) {
   .justified-text {
-      text-align: justify;        
+      text-align: left;        
       margin-right: 0;            
       margin-left: 0;             
       line-height: 1.5;           
-      font-size: 0.9rem;  /* Font size for extra-small screens */
+      font-size: 0.9rem; 
   }
 }
+
+
