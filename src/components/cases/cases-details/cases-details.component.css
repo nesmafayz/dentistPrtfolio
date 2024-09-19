@@ -1,0 +1,22 @@
+.container {
+    margin-top: 120px;
+  }
+  
+  .main{
+    width:50%;
+  }
+  
+  
+  p {
+    text-align: start;
+    font-style: italic;
+    margin-top: 10px;
+    font-weight:bold;
+    font-size:1.2rem;
+  }
+  h5
+  {
+    text-align: start; 
+  }
+  
+  

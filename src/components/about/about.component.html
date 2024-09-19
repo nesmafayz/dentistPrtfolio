@@ -6,10 +6,10 @@
     </div>
   </div>
   
-  <div class="container-fluid">
+  <div class="container-fluid p-1">
     <div class="row">
-      <div class="col-md-7 d-flex align-items-center p-4">
-        <h1 class="m-5 spaced-text">
+      <div class="col-md-7 d-flex align-items-center ">
+        <h1 class="m-3 spaced-text">
           P R O F I L E
         </h1>
         <div class="vertical-line"></div>
@@ -22,7 +22,7 @@
         </h4>
       </div>
       <div class="col-md-5 p-0 d-flex justify-content-end align-items-center">
-        <img src="assets/images/pic.jpg" width="500" alt="" class="img-fluid rounded-5 mt-5 mb-5">
+        <img src="../../assets/images/pic.jpg" width="500" alt="" class="img-fluid rounded-5 mt-5 mb-5">
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
           <h1 class="mb-4"><i class="fa-solid fa-briefcase"></i> E X P E R I E N C E </h1>
           <h5>DENTAL ASSISTANT FOR 8 MONTHS</h5>
           <p>From Sep.2022 till Apr.2023. With Dr. ahmed said</p>
-          <h5>OPERATOR FOR 3 MONTHS</h5>
+          <h5>Second OPERATOR FOR 3 MONTHS</h5>
           <p>From May.2023 to Jul.2023, at Dr.Ahmed Al-Nahrawy center</p>
           <h5>OPERATOR FOR 6 MONTHS</h5>
           <p>from oct. 2023 to apr. 2024 at Dr. amr al-hadedy clinic</p>
@@ -69,6 +69,8 @@
             ‘ant.restorations’ , Dr.Omar sittin ‘perio’ , Dr.Nermeen nagy ‘Crown’ , Dr.M.ABD.Monem
             ‘DSD</h5>
           <p>72 Credit Hours</p>
+          <h5>Online course ( Indirect restoration in the Biomimetic concept ) with profs   "David Alleman"  "Davey Alleman" "Ricardo Schafer"  "Andras Forster" "Farkas Peter"  "Lucas Queiroz Caponi"  "Andrea Fabianelli"</h5>
+        <h5>Online Composite Resin Veneers Course with Dr.Felipe Bezerra</h5>
         </div>
       </div>
       <!-- Card 4 -->
@@ -76,15 +78,56 @@
         <div class="card-gradient card-4 p-4 text-white text-center">
           <h1  class="mb-4"><i class="fa-solid fa-puzzle-piece"></i> S K I L L S </h1>
           <h5>Professional Dental photography</h5>
+          <h5> Professional case documentation</h5>
           <h5>Dental procedures using magnification ( loops , microscope )</h5>
           <h5>diagnosis and treatment planing</h5>
-          <h5>Very good with operating cases ( Endo - Fixed - Operative - Pedo )</h5>
+          <h5>Excellent with operating cases ( Endo - Fixed - Operative - Pedo )</h5>
           <h5>Ability to cope with anxious or difficult patients</h5>
           <h5>Forming a genuine connection with our patients</h5>
           <h5>Eagerness with learn advanced dental procedure</h5>
-          <h5>teamwork in dental practice</h5>
+          <h5>Time managment and teamwork in dental practice</h5>
         </div>
       </div>
     </div>
   </div>
   
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col d-flex justify-content-end"> 
+        <button class="button mt-5" (click)="goToCases()">Go To Cases</button> 
+      </div>
+    </div>
+  </div>
+   -->
+
+
+   <div class="container-fluid headWord">
+    <div class="row">
+        <div class="col ">
+            <h1>Clinical <span style="color: #09c;"> Departments</span></h1>
+        </div>
+    </div>
+  </div>
+  
+   <div class="container-fluid">
+    <div class="row">
+      <swiper-container [breakpoints] ="breakpoints" loop="true" navigation="true"  >
+        <swiper-slide 
+        *ngFor="let card of cards" 
+        class="slide"
+        (click)="goToCases()"
+      >
+        <div class="card-wrapper">
+          <div class="badge">
+            <span>{{ card.title }}</span>
+          </div>
+          <div class="card-container">
+            <img class="sliderImg" [src]="card.image" alt="{{ card.title }}" />
+          </div>
+        </div>
+      </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+  
+   

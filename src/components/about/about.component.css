@@ -2,6 +2,10 @@
     margin:0;
     
 }
+.spaced-text {
+  font-size: 2.5rem;
+  margin: 5rem;
+}
 .hero-section {
     position: relative;
     height: 100vh; 
@@ -84,9 +88,105 @@
 
 
   
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  overflow: hidden;
+  outline: 2px solid #09c;
+  
+}
+
+button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #09c;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #09c;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+
+
+.headWord {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin-bottom:100px;
+}
+
+
   .card-gradient h5 {
     font-size: 1.4rem;
   }
+
+  .sliderImg {
+    width: 300px;
+    height: auto; 
+    cursor:pointer;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .swiper-container {
+    padding-bottom: 20px; 
+  }
+
+
+ 
+
+.badge {
+  
+  transform: translateX(-50%); /* Center badge horizontally */
+  background: linear-gradient(135deg, gray, #ccd9ff); /* Gradient background */
+  color: white; /* Text color */
+  padding: 10px 20px;
+  border-radius: 0px; /* Rounded corners */
+  font-size: 14px; /* Adjust text size as needed */
+  z-index: 10; /* Ensure badge is on top */
+  margin-left:41px;
+  margin-bottom:20px;
+
+}
+
+.badge::after {
+  content: "";
+  display: block;
+  width: 300px;; /* Full width */
+  height: 2px; /* Thickness of the underline */
+  background: linear-gradient(135deg, gray, #ccd9ff); /* Color of the underline */
+  position: absolute;
+  bottom: -5px; /* Adjust distance from badge text */
+  left: 0;
+}
+
+
+
 
   
 .justified-text {
@@ -123,7 +223,9 @@
       margin-right: 5px;            
       margin-left: 0;             
       line-height: 1.5;           
-      font-size: 0.95rem;  
+      font-size: 0.95rem;
+      
+      
   }
 }
 
@@ -135,6 +237,34 @@
       line-height: 1.5;           
       font-size: 0.9rem; 
   }
-}
+  .spaced-text {
+    font-size: 1.4rem;
+    text-align: left;
+   
+  }
 
+  .vertical-line {
+    border-left: 3.4px solid #000; 
+    height: 230px;
+    margin-right: 15px; 
+    margin-top:10px;
+    
+    
+  }
+  
+  
+  .hero-section img {
+    max-width: 100%; /* Ensure the image fits within the container on small screens */
+    margin: 0; /* Remove any extra margin */
+  }
+  
+  .hero-content {
+    padding: 0 1rem; /* Adjust padding to avoid overflow on small screens */
+  }
+  
+  .button {
+    font-size: 0.8rem; /* Reduce button size */
+    padding: 0.5em 1.5em; /* Smaller padding for the button */
+  }
+}
 

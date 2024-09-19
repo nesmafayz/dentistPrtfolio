@@ -12,6 +12,9 @@
     color: white;
 }
 
+
+
+
 /* Apply Bebas Neue font */
 .bebas-neue-regular {
     font-family: "Bebas Neue", sans-serif;
@@ -30,7 +33,8 @@
     color: white !important;
     cursor: pointer;
     font-family: "Bebas Neue", sans-serif; 
-    font-size:1.6rem;
+    font-size:1.5rem;
+    
 }
 
 /* Underline effect on hover */
@@ -61,6 +65,11 @@
     width: 100%;
 }
 
+ul{
+    margin-left:200px;
+
+}
+
 body {
     padding-top: 70px; 
 }
@@ -72,16 +81,24 @@ body {
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    /* This SVG makes the lines (hamburger icon) white */
+    width: 20px; 
+    height: 20px; 
+   
 }
 
 @media (max-width: 576px) {
     .navbar-brand img {
-        width: 122px;  /* Reduce the width of the logo */
+        width: 140px;  /* Reduce the width of the logo */
         height: auto;  /* Keep the aspect ratio */
     }
 
     .navbar-toggler {
-        margin-left: auto;  /* Push the toggle button to the right */
+        margin-left: auto; 
+        margin-right:10px; 
+    }
+
+    ul{
+        margin-left:0;
+    
     }
 }

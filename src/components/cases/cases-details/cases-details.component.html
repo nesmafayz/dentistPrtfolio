@@ -1,1 +1,23 @@
-<p>cases-details works!</p>
+<!-- الصورة الرئيسية تأخذ العرض الكامل -->
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12">
+            <img [src]="card?.image" class="main h-auto rounded-1" alt="Main Image">
+            <h1>{{ card?.description }}</h1>
+        </div>
+    </div>
+</div>
+
+<!-- الصور الأخرى مع النصوص كل صورتين في صف -->
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-xl-8 w-75" *ngFor="let img of card?.images; let i = index">
+            <div class="mb-4 ">
+                <img [src]="img.url" class="w-50 rounded-1" alt="Image" />
+                <p>Fig{{ i + 1 }}</p>
+                   <h5> {{ img.text }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
