@@ -21,15 +21,16 @@
 
 h1 {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 4.3rem;
+    font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 
 img {
     height: 200px;
 }
 
-.col-xl-3 {
+.col-xl-5 {
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -42,6 +43,8 @@ img {
     overflow: hidden;
     width: 100%;
     height: auto;
+    cursor:pointer;
+
 }
 
 .card-img-top {
@@ -163,6 +166,7 @@ img {
     h1 {
         font-size: 4.3rem;
     }
+    
 
     .card {
         flex-direction: column;
@@ -182,3 +186,6 @@ img {
         font-size: 1.25rem;
     }
 }
+
+
+

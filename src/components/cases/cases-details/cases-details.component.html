@@ -1,23 +1,77 @@
-<!-- الصورة الرئيسية تأخذ العرض الكامل -->
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-12">
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- Main content (Left Section - 8 columns) -->
+    <div class="col-12 col-md-8">
+      <!-- Main Image (Full width) -->
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12">
             <img [src]="card?.image" class="main h-auto rounded-1" alt="Main Image">
             <h1>{{ card?.description }}</h1>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<!-- الصور الأخرى مع النصوص كل صورتين في صف -->
-<div class="container mt-4">
-    <div class="row">
-
-        <div class="col-xl-8 w-75" *ngFor="let img of card?.images; let i = index">
-            <div class="mb-4 ">
-                <img [src]="img.url" class="w-50 rounded-1" alt="Image" />
-                <p>Fig{{ i + 1 }}</p>
-                   <h5> {{ img.text }}</h5>
+      <!-- Other images with text (Two per row) -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-xl-8 w-100" *ngFor="let img of card?.images; let i = index">
+            <div class="mb-4">
+              <img [src]="img.url" class="w-50 rounded-1" alt="Image" />
+              <p>Fig{{ i + 1 }}</p>
+              <h5>{{ img.text }}</h5>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+
+   <!-- Sidebar (Right Section - 4 columns) -->
+<div class="col-12 col-md-4 mt-5 bg-light">
+  <div class="">
+    <div class="sidebar mb-3">
+      <img class="rounded-circle" src="../../../assets/images/pic.jpg" height="70%" width="60%" alt="">
+      
+<button class="cta m-4" [routerLink]="['/about']">
+  <span>Show CV</span>
+  <svg width="15px" height="10px" viewBox="0 0 13 10">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
+</button>
+
+
+    <h2 class="mt-2  bg-dark-subtle rounded-pill p-2">Check Other Cases</h2>    
+    </div>
+    
+    <!-- Carousel Start -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let otherCard of cards; let i = index" [class.active]="i === 0">
+          <!-- Clicking the entire item will trigger a route change -->         
+          <a [routerLink]="['/cases-details', otherCard.id]">
+            <img [src]="otherCard.image" class="d-block" height="260px" width="100%" alt="{{ otherCard.title }}">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </a>
+          <h3 class="mx-auto sidebar mb-3  p-2">{{ otherCard.description }}</h3>
+
+          
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Carousel End -->
+  </div>
 </div>
+
+      </div>
+    </div>
+  

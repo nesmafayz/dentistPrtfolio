@@ -115,7 +115,7 @@
         <swiper-slide 
         *ngFor="let card of cards" 
         class="slide"
-        (click)="goToCases()"
+        (click)="goToCases(card.id)"
       >
         <div class="card-wrapper">
           <div class="badge">

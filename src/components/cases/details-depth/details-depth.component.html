@@ -1,0 +1,37 @@
+
+
+
+
+
+
+ <div class="container-fluid headWord">
+    <div class="row">
+        <div class="col">
+            <h1>Clinical <span style="color: #09c;"> Cases</span></h1>
+        </div>
+    </div>
+</div> 
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-lg-4" *ngFor="let card of cards; let i = index">
+        <div class="main">
+          <ul class="cards mt-5">
+            <li class="cards_item">
+              <div class="card" tabindex="0" (click)="goToCaseDetail(card)">
+                <div class="card_image">
+                  <img [src]="card.image" [alt]="card.title" />
+                </div>
+                <div class="card_content">
+                  <h2 class="m-2">{{ card.title }}</h2>
+                  <div class="card_text">
+                    <p><strong>{{ card.description }}</strong></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

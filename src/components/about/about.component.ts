@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import{register} from 'swiper/element/bundle';
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DetailsDepthComponent } from '../cases/details-depth/details-depth.component';
 
 
 register();
@@ -11,7 +12,7 @@ register();
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,DetailsDepthComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -34,25 +35,60 @@ export class AboutComponent implements OnInit {
 
 
   cards = [
-    { id: 1, image: '../../assets/images/cases/c1.jpg', title: 'Card 1', description: 'This is the first card' },
-    { id: 2, image: '../../assets/images/cases/c2.jpg', title: 'Card 2', description: 'This is the first card' },
-    { id: 3, image: '../../assets/images/cases/c3.jpg', title: 'Card 3', description: 'This is the first card' },
-    { id: 4, image: '../../assets/images/cases/c4.jpg', title: 'Card 4', description: 'This is the first card' },
-    { id: 5, image: '../../assets/images/cases/c5.jpg', title: 'Card 5', description: 'This is the first card' },
-    { id: 6, image: '../../assets/images/cases/c6.jpg', title: 'Card 6', description: 'This is the first card' },
-    { id: 7, image: '../../assets/images/cases/c7.jpg', title: 'Card 7', description: 'This is the second card' }
+    { id: 1, image: '../../assets/images/cases/dd3.jpg', title: 'Inderict Biomimetic', description: 'This is the first card',
+      cases: [
+        { id: 1, image: '../../../assets/images/case1.jpg', title: 'Case 1 for Indirect Biomimetic', description: 'Description for Case 1' },
+        { id: 2, image: '../../../assets/images/case2.jpg', title: 'Case 2 for Indirect Biomimetic', description: 'Description for Case 2' },
+      ]
+     },
+    { id: 2, image: '../../assets/images/cases/dd7.jpg', title: 'Conventional post.Crown', description: 'This is the first card',
+      cases: [
+        { id: 3, image: '../../../assets/images/case1.jpg', title: 'Case 1 for Indirect Biomimetic', description: 'Description for Case 1' },
+        { id: 4, image: '../../../assets/images/case2.jpg', title: 'Case 2 for Indirect Biomimetic', description: 'Description for Case 2' },
+      ]
+     },
+    { id: 3, image: '../../assets/images/cases/dd5.jpg', title: 'Direct Posterior', description: 'This is the first card',
+      cases: [
+        { id: 5, image: '../../../assets/images/case1.jpg', title: 'Case 1 for Indirect Biomimetic', description: 'Description for Case 1' },
+        { id: 6, image: '../../../assets/images/case2.jpg', title: 'Case 2 for Indirect Biomimetic', description: 'Description for Case 2' },
+      ]
+     },
+    { id: 4, image: '../../assets/images/cases/dd6.jpg', title: 'Direct Anterior', description: 'This is the first card',
+      cases: [
+        { id: 7, image: '../../../assets/images/case1.jpg', title: 'Case 1 for Indirect Biomimetic', description: 'Description for Case 1' },
+        { id: 8, image: '../../../assets/images/case2.jpg', title: 'Case 2 for Indirect Biomimetic', description: 'Description for Case 2' },
+      ]
+     },
+    { id: 5, image: '../../assets/images/cases/dd4.jpg', title: 'Inderict Anterior', description: 'This is the first card',
+      cases: [
+        { id: 9, image: '../../../assets/images/case1.jpg', title: 'Case 1 for Indirect Biomimetic', description: 'Description for Case 1' },
+        { id: 10, image: '../../../assets/images/case2.jpg', title: 'Case 2 for Indirect Biomimetic', description: 'Description for Case 2' },
+      ]
+     },
+    { id: 6, image: '../../assets/images/cases/dd2.jpg', title: 'Minimally Invasive', description: 'This is the first card',
+      cases: [
+        { id: 11, image: '../../../assets/images/case1.jpg', title: 'Case 1 for Indirect Biomimetic', description: 'Description for Case 1' },
+        { id: 12, image: '../../../assets/images/case2.jpg', title: 'Case 2 for Indirect Biomimetic', description: 'Description for Case 2' },
+      ]
+     },
+    { id: 7, image: '../../assets/images/cases/dd1.jpg', title: 'Endodontic', description: 'This is the second card',
+      cases: [
+        { id: 13, image: '../../../assets/images/case1.jpg', title: 'Case 1 for Indirect Biomimetic', description: 'Description for Case 1' },
+        { id: 14, image: '../../../assets/images/case2.jpg', title: 'Case 2 for Indirect Biomimetic', description: 'Description for Case 2' },
+      ]
+     }
   ];
 
   breakpoints = {
-    0: { slidesPerView: 1.5, spaceBetween: 25 },
-    768: { slidesPerView: 4, spaceBetween: 90 }
+    0: { slidesPerView: 1.5, spaceBetween: 30 },
+    768: { slidesPerView: 4.7, spaceBetween: 100 }
   };
 
 
   constructor(private router: Router) {}
 
-  goToCases() {
-    this.router.navigate(['/cases']); 
+  goToCases(id:number) {
+    this.router.navigate(['/details-depth',id]); 
   }
 
 }

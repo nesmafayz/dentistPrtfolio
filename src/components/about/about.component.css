@@ -24,6 +24,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .headWord {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.headWord2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4.3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
   
   #typed-output {
     font-size: 5rem;
@@ -162,14 +179,14 @@ button:hover::before {
 
 .badge {
   
-  transform: translateX(-50%); /* Center badge horizontally */
+  transform: translateX(-35%); 
   background: linear-gradient(135deg, gray, #ccd9ff); /* Gradient background */
   color: white; /* Text color */
   padding: 10px 20px;
   border-radius: 0px; /* Rounded corners */
   font-size: 14px; /* Adjust text size as needed */
-  z-index: 10; /* Ensure badge is on top */
-  margin-left:41px;
+  margin-left:50px; 
+
   margin-bottom:20px;
 
 }
@@ -177,11 +194,11 @@ button:hover::before {
 .badge::after {
   content: "";
   display: block;
-  width: 300px;; /* Full width */
+  width: 295px; /* Full width */
   height: 2px; /* Thickness of the underline */
   background: linear-gradient(135deg, gray, #ccd9ff); /* Color of the underline */
   position: absolute;
-  bottom: -5px; /* Adjust distance from badge text */
+  bottom: -5px; 
   left: 0;
 }
 
